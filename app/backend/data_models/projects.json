@@ -1,0 +1,43 @@
+{
+  "title": "projects",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "primary_key": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "format": "text"
+    },
+    "active_blueprint_id": {
+      "type": "integer"
+    },
+    "active_version": {
+      "type": "integer"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "System-managed owner user ID"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "read_only": true
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "read_only": true
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "user_id"
+  ],
+  "create_only": true
+}

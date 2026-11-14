@@ -1,0 +1,38 @@
+{
+  "title": "records",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "primary_key": true
+    },
+    "project_id": {
+      "type": "integer"
+    },
+    "data": {
+      "type": "string",
+      "format": "text"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "System-managed owner user ID"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "read_only": true
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "read_only": true
+    }
+  },
+  "required": [
+    "id",
+    "project_id",
+    "data",
+    "user_id"
+  ],
+  "create_only": true
+}

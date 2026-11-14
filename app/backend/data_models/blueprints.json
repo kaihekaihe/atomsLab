@@ -1,0 +1,52 @@
+{
+  "title": "blueprints",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "primary_key": true
+    },
+    "project_id": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "data": {
+      "type": "string",
+      "format": "text"
+    },
+    "source_prompt": {
+      "type": "string",
+      "format": "text"
+    },
+    "engine": {
+      "type": "string"
+    },
+    "run_id": {
+      "type": "integer"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "System-managed owner user ID"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "read_only": true
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "read_only": true
+    }
+  },
+  "required": [
+    "id",
+    "project_id",
+    "version",
+    "data",
+    "user_id"
+  ],
+  "create_only": true
+}
